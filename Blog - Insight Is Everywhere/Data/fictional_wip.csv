@@ -1,0 +1,102 @@
+Member name,Calculation type,Date requested,Deadline,Done by,Checked by,Reviewed by,Date sent,Size,Deadline met?
+David Davidson,Transfer value,05/01/2019,09/01/2019,Alice,Bob,Dave,07/01/2019,367120,Y
+John Johnson,Retirement quote,06/01/2019,08/01/2019,Alice,Bob,Dave,08/01/2019,15383,Y
+Paul Paulson,Transfer value,09/01/2019,11/01/2019,Alice,Bob,Dave,11/01/2019,309297,Y
+Mark Markson,Transfer value,13/01/2019,17/01/2019,Alice,Bob,Dave,16/01/2019,27729,Y
+James Jamesson,Retirement quote,16/01/2019,18/01/2019,Alice,Bob,Carol,17/01/2019,5989,Y
+Alice Aliceson,Retirement quote,18/01/2019,23/01/2019,Alice,Bob,Dave,22/01/2019,5692,Y
+Scott Scottson,Transfer value,20/01/2019,24/01/2019,Alice,Carol,Dave,22/01/2019,478478,Y
+Steven Stevenson,Pension sharing order,27/01/2019,31/01/2019,Alice,Carol,Dave,04/02/2019,,N
+Robert Robertson,Transfer value,28/01/2019,30/01/2019,Alice,Carol,Bob,30/01/2019,503595,Y
+Stephen Stephenson,Augmentation,09/02/2019,11/02/2019,Alice,Bob,Carol,11/02/2019,,Y
+William Williamson,Transfer value,12/02/2019,16/02/2019,Alice,Bob,Dave,16/02/2019,312826,Y
+Craig Craigson,Augmentation,14/02/2019,17/02/2019,Bob,Alice,Dave,17/02/2019,,Y
+Michael Michaelson,Transfer value,16/02/2019,18/02/2019,Alice,Carol,Dave,17/02/2019,57920,Y
+Stuart Stuartson,Transfer value,24/02/2019,26/02/2019,Alice,Bob,Dave,25/02/2019,464341,Y
+Christopher Christopherson,Augmentation,26/02/2019,28/02/2019,Alice,Bob,Carol,02/03/2019,,N
+Alan Alanson,Transfer value,09/03/2019,14/03/2019,Alice,Bob,Carol,11/03/2019,373191,Y
+Colin Colinson,LRF calculation,11/03/2019,14/03/2019,Alice,Bob,Carol,13/03/2019,,Y
+Brian Brianson,Retirement quote,25/03/2019,28/03/2019,Alice,Bob,Carol,27/03/2019,12877,Y
+Kevin Kevinson,Retirement quote,07/04/2019,11/04/2019,Alice,Carol,Dave,09/04/2019,22910,Y
+Gary Garyson,Transfer value,08/04/2019,11/04/2019,Alice,Bob,Dave,10/04/2019,308630,Y
+Richard Richardson,Transfer value,19/04/2019,23/04/2019,Alice,Carol,Dave,22/04/2019,263210,Y
+Derek Derekson,Transfer value,20/04/2019,24/04/2019,Alice,Bob,Dave,22/04/2019,688176,Y
+Martin Martinson,Transfer value,21/04/2019,24/04/2019,Alice,Carol,Dave,22/04/2019,295229,Y
+Thomas Thomasson,Transfer value,30/04/2019,02/05/2019,Alice,Bob,Carol,03/05/2019,596660,N
+Neil Neilson,Pension sharing order,04/05/2019,09/05/2019,Alice,Bob,Carol,10/05/2019,,N
+Barry Barryson,Augmentation,05/05/2019,10/05/2019,Alice,Carol,Dave,07/05/2019,,Y
+Ian Ianson,Retirement quote,07/05/2019,12/05/2019,Bob,Alice,Carol,09/05/2019,5573,Y
+Jason Jasonson,Transfer value,09/05/2019,14/05/2019,Bob,Alice,Dave,12/05/2019,621680,Y
+Iain Iainson,Transfer value,12/05/2019,17/05/2019,Alice,Carol,Dave,14/05/2019,590055,Y
+Gordon Gordonson,Retirement quote,17/05/2019,21/05/2019,Alice,Bob,Carol,19/05/2019,23346,Y
+Alexander Alexanderson,Transfer value,18/05/2019,22/05/2019,Alice,Carol,Dave,21/05/2019,268329,Y
+Graeme Graemeson,Retirement quote,23/05/2019,27/05/2019,Alice,Bob,Dave,25/05/2019,23727,Y
+Peter Peterson,Transfer value,24/05/2019,29/05/2019,Alice,Bob,Carol,28/05/2019,297356,Y
+Darren Darrenson,Transfer value,27/05/2019,31/05/2019,Alice,Carol,Bob,31/05/2019,126334,Y
+Graham Grahamson,Transfer value,04/06/2019,07/06/2019,Bob,Alice,Dave,06/06/2019,638752,Y
+George Georgeson,Transfer value,06/06/2019,09/06/2019,Alice,Bob,Carol,09/06/2019,427372,Y
+Kenneth Kennethson,Augmentation,11/06/2019,16/06/2019,Alice,Bob,Dave,19/06/2019,,N
+Allan Allanson,Transfer value,27/06/2019,30/06/2019,Alice,Carol,Bob,29/06/2019,221738,Y
+Simon Simonson,Retirement quote,27/06/2019,01/07/2019,Bob,Alice,Carol,30/06/2019,11379,Y
+Douglas Douglasson,Retirement quote,30/06/2019,05/07/2019,Alice,Bob,Carol,02/07/2019,7534,Y
+Keith Keithson,Transfer value,10/07/2019,13/07/2019,Eve,Alice,Bob,14/07/2019,353465,N
+Lee Leeson,Transfer value,12/07/2019,17/07/2019,Eve,Alice,Bob,16/07/2019,425747,Y
+Anthony Anthonyson,Transfer value,29/07/2019,01/08/2019,Eve,Alice,Bob,02/08/2019,303927,N
+Grant Grantson,Retirement quote,06/08/2019,11/08/2019,Alice,Carol,Bob,08/08/2019,20791,Y
+Ross Rossson,Augmentation,06/08/2019,10/08/2019,Eve,Alice,Bob,09/08/2019,,Y
+Jonathan Jonathanson,LRF calculation,07/08/2019,09/08/2019,Eve,Alice,Carol,10/08/2019,,N
+Gavin Gavinson,Augmentation,20/08/2019,23/08/2019,Eve,Alice,Bob,24/08/2019,,N
+Nicholas Nicholasson,Transfer value,26/08/2019,31/08/2019,Eve,Alice,Dave,30/08/2019,16771,Y
+Joseph Josephson,Retirement quote,27/08/2019,29/08/2019,Eve,Alice,Dave,31/08/2019,27243,N
+Stewart Stewartson,Transfer value,03/09/2019,06/09/2019,Eve,Alice,Bob,07/09/2019,202330,N
+Anoushka Anoushkason,Transfer value,16/09/2019,20/09/2019,Eve,Alice,Bob,20/09/2019,80941,Y
+Ansa Ansason,Retirement quote,30/09/2019,04/10/2019,Eve,Alice,Dave,03/10/2019,1050,Y
+Antoinette Antoinetteson,Retirement quote,06/10/2019,09/10/2019,Eve,Alice,Bob,10/10/2019,28883,N
+Antonella Antonellason,Transfer value,08/10/2019,11/10/2019,Eve,Alice,Bob,12/10/2019,519617,N
+Anwen Anwenson,Augmentation,13/10/2019,17/10/2019,Eve,Alice,Bob,15/10/2019,,Y
+Anya Anyason,Transfer value,26/10/2019,28/10/2019,Eve,Alice,Bob,28/10/2019,199223,Y
+Anza Anzason,Retirement quote,27/10/2019,29/10/2019,Eve,Alice,Bob,30/10/2019,9537,N
+Anzela Anzelason,Retirement quote,29/10/2019,31/10/2019,Alice,Carol,Bob,02/11/2019,14434,N
+Arabell Arabellson,Retirement quote,02/11/2019,05/11/2019,Eve,Alice,Carol,05/11/2019,1844,Y
+Arabella Arabellason,Transfer value,15/11/2019,19/11/2019,Eve,Alice,Bob,17/11/2019,545978,Y
+Ariane Arianeson,Transfer value,20/11/2019,22/11/2019,Eve,Alice,Bob,22/11/2019,216154,Y
+Arianna Ariannason,Transfer value,21/11/2019,25/11/2019,Eve,Alice,,24/11/2019,63320,Y
+Arianne Arianneson,Transfer value,23/11/2019,27/11/2019,Eve,Alice,Bob,25/11/2019,245522,Y
+Arola Arolason,Transfer value,25/11/2019,30/11/2019,Alice,Carol,Bob,27/11/2019,290764,Y
+Arran Arranson,Transfer value,25/11/2019,30/11/2019,Alice,Bob,Dave,27/11/2019,189410,Y
+Aryana Aryanason,Transfer value,03/12/2019,08/12/2019,Eve,Alice,Carol,05/12/2019,415514,Y
+Asheley Asheleyson,Transfer value,06/12/2019,11/12/2019,Eve,Alice,Bob,10/12/2019,375451,Y
+Ashia Ashiason,Transfer value,16/12/2019,19/12/2019,Eve,Alice,Carol,18/12/2019,555488,Y
+Ashlene Ashleneson,Retirement quote,18/12/2019,23/12/2019,Eve,Alice,Bob,22/12/2019,18143,Y
+Ashly Ashlyson,Retirement quote,23/12/2019,26/12/2019,Eve,Alice,Bob,25/12/2019,15423,Y
+Asieaa Asieaason,Transfer value,29/12/2019,03/01/2020,Eve,Alice,Bob,31/12/2019,26448,Y
+Asmara Asmarason,Transfer value,31/12/2019,03/01/2020,Eve,Alice,Bob,02/01/2020,514426,Y
+Assia Assiason,Transfer value,31/12/2019,03/01/2020,Eve,Alice,Bob,02/01/2020,535354,Y
+Assmaa Assmaason,Retirement quote,05/01/2020,08/01/2020,Eve,Alice,Bob,08/01/2020,21107,Y
+Assunta Assuntason,LRF calculation,12/01/2020,15/01/2020,Eve,Alice,Bob,22/01/2020,,N
+Astral Astralson,Transfer value,24/01/2020,28/01/2020,Eve,Alice,Dave,26/01/2020,360822,Y
+Asuhma Asuhmason,Transfer value,26/01/2020,30/01/2020,Eve,Alice,Bob,28/01/2020,325572,Y
+Aubrey Aubreyson,LRF calculation,27/01/2020,30/01/2020,Alice,Carol,Bob,02/02/2020,,N
+Aurora Aurorason,Retirement quote,30/01/2020,02/02/2020,Eve,Alice,Bob,02/02/2020,18216,Y
+Ava Avason,Transfer value,02/02/2020,06/02/2020,Eve,Alice,Bob,05/02/2020,557277,Y
+Aveen Aveenson,Transfer value,03/02/2020,06/02/2020,Eve,Bob,Carol,06/02/2020,151216,Y
+Averyl Averylson,Retirement quote,05/02/2020,07/02/2020,Eve,Alice,Bob,07/02/2020,5374,Y
+Ayesha Ayeshason,Retirement quote,14/02/2020,18/02/2020,Eve,Alice,Bob,17/02/2020,6483,Y
+Aynsley Aynsleyson,Transfer value,23/02/2020,27/02/2020,Eve,Alice,Bob,25/02/2020,311406,Y
+Aysha Ayshason,Transfer value,23/02/2020,27/02/2020,Eve,Alice,Carol,26/02/2020,504731,Y
+Azza Azzason,Transfer value,06/03/2020,11/03/2020,Eve,Alice,Bob,09/03/2020,13665,Y
+Azzura Azzurason,Transfer value,11/03/2020,13/03/2020,Eve,Bob,Dave,15/03/2020,217637,N
+Baljit Baljitson,Retirement quote,12/03/2020,14/03/2020,Eve,Alice,Bob,16/03/2020,11346,N
+Bambi Bambison,Transfer value,16/03/2020,19/03/2020,Eve,Alice,Dave,19/03/2020,688516,Y
+Barbara-Ann Barbara-Annson,Pension sharing order,19/03/2020,21/03/2020,Eve,Alice,Bob,21/03/2020,,Y
+Barbie Barbieson,Retirement quote,20/03/2020,25/03/2020,Eve,Alice,Bob,24/03/2020,13140,Y
+Barley Barleyson,Retirement quote,26/03/2020,31/03/2020,Eve,Alice,Bob,28/03/2020,16937,Y
+Batool Batoolson,Transfer value,26/03/2020,30/03/2020,Eve,Alice,Bob,29/03/2020,406304,Y
+Beata Beatason,Transfer value,28/03/2020,01/04/2020,Eve,Alice,Bob,01/04/2020,73586,Y
+Belle Belleson,Retirement quote,02/04/2020,07/04/2020,Eve,Alice,Bob,05/04/2020,9031,Y
+Bellinne Bellinneson,Transfer value,08/04/2020,12/04/2020,Eve,Alice,Bob,11/04/2020,121390,Y
+Bernice Berniceson,Transfer value,18/04/2020,21/04/2020,Eve,Alice,Dave,20/04/2020,603797,Y
+Bethan Bethanson,Transfer value,19/04/2020,22/04/2020,Eve,Alice,Bob,21/04/2020,596281,Y
+Bethnae Bethnaeson,Transfer value,19/04/2020,23/04/2020,Eve,Alice,Bob,21/04/2020,360192,Y
+Bethne Bethneson,Transfer value,20/04/2020,24/04/2020,Eve,Bob,Dave,22/04/2020,460912,Y
+Beverly-Jo Beverly-Joson,Transfer value,29/04/2020,02/05/2020,Eve,Alice,Bob,30/04/2020,143616,Y
