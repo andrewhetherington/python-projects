@@ -1,0 +1,23 @@
+Date,Name,Referred by,Amount spent (£)
+18/05/2020,Alice,n/a,4.35
+18/05/2020,Bob,Alice,28
+18/05/2020,Carol,Bob,3.7
+19/05/2020,Niaj,Alice,4.5
+19/05/2020,Mallory,Bob,3.3
+19/05/2020,Dan,Carol,5.3
+19/05/2020,Erin,Carol,9
+19/05/2020,Frank,Dan,5
+19/05/2020,Grace,Erin,5
+20/05/2020,Heidi,Frank,3
+20/05/2020,Ivan,Mallory,10
+20/05/2020,Judy,Erin,3
+19/05/2020,Olivia,Niaj,3
+19/05/2020,Peggy,Dan,3
+20/05/2020,Rupert,Ivan,6
+20/05/2020,Sybil,Niaj,3.2
+20/05/2020,Trent,Olivia,3
+20/05/2020,Victor,Walter,20
+20/05/2020,Arthur,Alice,3.5
+20/05/2020,Merlin,Alice,3
+20/05/2020,Paul,Arthur,6
+20/05/2020,Bertha,Trent,10
