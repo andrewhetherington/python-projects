@@ -1,0 +1,69 @@
+baseurl = "/"
+title = "Andrew Hetherington"
+theme = "ghostwriter"
+languageCode = "en-us"
+copyright = "Andrew Hetherington"
+disqusShortname = "XXX"
+googleAnalytics = "XXX"
+
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[Privacy]
+
+[Privacy.disqus]
+    disable = true
+
+[Privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = false
+
+[Author]
+    name = "Andrew Hetherington"
+    profile = ""
+
+[Taxonomies]
+    tag = "tags"
+
+[Params]
+    intro = true
+    headline = "Andrew Hetherington"
+    description = "Actuary-in-training and data enthusiast based in London, UK. "
+    github = "https://github.com/andrewhetherington"
+    gitlab = ""
+    linkedin = "https://www.linkedin.com/in/andrewmhetherington"
+    gplus = ""
+    twitter = ""
+    stackoverflow = ""
+    email = "andrew.m.hetherington@gmail.com"
+    opengraph = true
+    shareTwitter = true
+    shareFacebook = true
+    shareGooglePlus = true
+    shareLinkedIn = true
+    dateFormat = "Monday, January 2, 2006"
+    highlightJsUrl = ""
+    highlightJsLocalUrl = ""
+
+[Permalinks]
+    post = "/:year/:month/:day/:filename/"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Contact"
+    url = "/page/contact/"
+    weight = 3
+
+[[menu.main]]
+    name = "About"
+    url = "/page/about/"
+    weight = 4
+
+[[menu.main]]
+    name = "CV"
+    url = "/page/cv/"
+    weight = 5
