@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Andrew Hetherington</title>
+    <link>/page/</link>
+    <description>Recent content in Pages on Andrew Hetherington</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Andrew Hetherington</copyright>
+    <lastBuildDate>Sun, 14 Jun 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Identifying Emerging Market Segments with k-means</title>
+      <link>/page/emerging-market-segments-kmeans/</link>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/page/emerging-market-segments-kmeans/</guid>
+      <description>EY’s Future Consumer Index is a short, 8-minute read that pulls together the results of a survey of 4,859 consumers across the US, Canada, UK, France and Germany during the week of 6 April 2020. Using some rather snazzy data visualisation techniques, EY proposes the emergence of five distinct types of consumer in the aftermath of the Covid-19 pandemic, each with differing behaviours and sentiment in regard to their purchasing decisions.</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Basics and the Philosophers of Old</title>
+      <link>/page/ml-philosophers-of-old/</link>
+      <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/page/ml-philosophers-of-old/</guid>
+      <description>Socrates glances up from his Jupyter notebook and gives you that look — you’ve gotten used to it by now. You’ve spent enough time hanging around the great philosophers of antiquity to know that you’re about to get schooled. Again.
+“What do you mean you don’t understand machine learning?” he says, with a wry smile. “That’s exactly the point. I’ve told you before, it’s better to know that you know nothing*.</description>
+    </item>
+    
+    <item>
+      <title>New Actuaries Must Know About Machine Learning</title>
+      <link>/page/new-actuaries-ml/</link>
+      <pubDate>Sat, 30 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/page/new-actuaries-ml/</guid>
+      <description>Machine Learning (ML) is an inescapable topic — and it’s also caused a stir within the actuarial industry. Machine Learning can be defined simply as “the science (and art) of programming computers so they can learn from data”, courtesy of A. Géron in his 2019 book. It’s proved itself as an invaluable tool that companies with deluges of data can use to extract insights to enhance their products and services.</description>
+    </item>
+    
+    <item>
+      <title>La Visualisation des Arborescences avec ETE Toolkit (FR)</title>
+      <link>/page/fr-ete-toolkit/</link>
+      <pubDate>Mon, 25 May 2020 22:12:42 +1200</pubDate>
+      
+      <guid>/page/fr-ete-toolkit/</guid>
+      <description>Le monde est très complexe. Les choses sont liées en tout un tas des façons — quelques relations sont intuitives, autres ne sont pas. Du coup, les données qu’on ramasse se présentent sous diverses formes.
+En plus, Data Visualisation est un des plus importants aspects du processus de l’analyse des données. La visualisation de façon claire est donc cruciale lorsqu’il faut aider les clients à comprendre.
+En combinaison, ces deux points-ci veulent dire que les gens qui travaillent avec les données ont besoin d’être prêts à les représenter avec des techniques et des méthodes qui mieux illustrer les relations entre les points de données — et les conséquences pour l’action.</description>
+    </item>
+    
+    <item>
+      <title>Visualising Tree Data with ETE Toolkit (EN)</title>
+      <link>/page/en-ete-toolkit/</link>
+      <pubDate>Sat, 23 May 2020 22:12:42 +1200</pubDate>
+      
+      <guid>/page/en-ete-toolkit/</guid>
+      <description>The world is very complex. Things are related in all kinds of different ways — some relations are intuitive, some aren’t. As a result, the data that we collect and use to describe the world comes in all kinds of shapes and sizes.
+In addition, Data Visualisation is one of the most important aspects of the data analysis process. Good visualisation is critical in helping clients and stakeholders understand data.</description>
+    </item>
+    
+    <item>
+      <title>Using Maths to Rig Elections</title>
+      <link>/page/maths-rig-elections/</link>
+      <pubDate>Sat, 16 May 2020 22:12:42 +1200</pubDate>
+      
+      <guid>/page/maths-rig-elections/</guid>
+      <description>Disclaimer: I do not condone using maths to rig elections! But for argument’s sake…
+Imagine for a moment that you were not-so-morally upstanding of a person and that you were tasked with making up a set of numbers. You need to doctor these figures in such a way that they represent a favourable outcome, while also not attracting suspicion from anyone that might happen to look at them.
+You decide to pick them randomly — or even better — to use a random number generator to remove any kind of unconscious bias that you might accidentally bring in.</description>
+    </item>
+    
+    <item>
+      <title>Insight Is Everywhere</title>
+      <link>/page/insight-everywhere/</link>
+      <pubDate>Sat, 09 May 2020 22:12:42 +1200</pubDate>
+      
+      <guid>/page/insight-everywhere/</guid>
+      <description>Data Science is not reserved for those people who have formally trained in it. Anyone with the motivation can hop on their laptop and start digging, investigating, and visualising.
+They can get started on the data they have lying around. And boy, do we have it lying around — often in very large quantities. In our jobs and in our lives, we are constantly chucking out data — and although the quality of it varies from source to source, I will not believe you if you tell me that there’s nothing of value that can be drawn out from the data you have access to.</description>
+    </item>
+    
+    <item>
+      <title>The Ancient Art of Descriptive Data Analysis</title>
+      <link>/page/ancient-art-descriptive-data-analysis/</link>
+      <pubDate>Sun, 03 May 2020 22:12:42 +1200</pubDate>
+      
+      <guid>/page/ancient-art-descriptive-data-analysis/</guid>
+      <description>You’ve probably heard at some point that humans are incredibly good at detecting patterns in the environment. And that’s true — for thousands of years, our brains have been making inferences and predictions based on observed data.
+To illustrate: Gerald, a Palaeolithic caveperson, has met a sample of wild tigers that have all tried to have him for dinner. Gerald makes an inference about the population of wild tigers and concludes that he should probably steer clear of them in the future.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/page/about/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/page/about/</guid>
+      <description>I&amp;rsquo;m Andrew. There are a lot of things I don’t know, but I’m not afraid to admit it and that means I pick things up quickly. I get a buzz out of learning and trying to figure out tricky problems. I&amp;rsquo;m currently studying to become a qualified actuary with Lane Clark &amp;amp; Peacock.
+Knowing that my work is having a positive impact is important to me. Over the course of my career I hope to become more and more capable of developing tools and giving advice to help people make sense of complicated situations.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/page/contact/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/page/contact/</guid>
+      <description>If you find my work of interest or otherwise want to get in touch , then feel free to email me at andrew.m.hetherington@gmail.com. Alternatively, connect with me on LinkedIn. I&amp;rsquo;m also on Medium.</description>
+    </item>
+    
+    <item>
+      <title>Curriculum Vitae</title>
+      <link>/page/cv/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/page/cv/</guid>
+      <description>Also avaliable as a pdf, last updated 17 June 2020.
+ANDREW HETHERINGTON Email: andrew.m.hetherington@gmail.com Git: https://github.com/andrewhetherington
+LinkedIn: https://www.linkedin.com/in/andrewmhetherington/
+Physics graduate with exceptional academic results and over 1.5 years of experience of consultancy within the pensions industry.
+Based in London, UK.
+EDUCATION BSc (Hons) Physics—Durham University (05/10/2015—26/06/2018)
+86% Overall mark. 1st class honours—transcript available upon request.
+Awards: J A Chalmers Prize in Physics (2018), Durham Physics Award for Outstanding Achievement (2017, 2018), Durham Award (2018)</description>
+    </item>
+    
+  </channel>
+</rss>

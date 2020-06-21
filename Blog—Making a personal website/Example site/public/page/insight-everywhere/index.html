@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Insight Is Everywhere &middot; Andrew Hetherington</title>
+        <meta name="description" content="Your data contains insight. Yes, yours!">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.72.0" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Insight Is Everywhere">
+<meta property="og:description" content="Your data contains insight. Yes, yours!">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/page/insight-everywhere/">
+        <link rel="stylesheet" href="/dist/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+         <link rel="stylesheet" href="/extra.css" />
+        
+        
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'XXX', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Andrew Hetherington" href="/">Andrew Hetherington</a>
+                            </h1>
+                        
+                        <a class="button-square" href="/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/andrewhetherington" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/andrewmhetherington" rel="me">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:andrew.m.hetherington@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="CV" href="/page/cv/">CV</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">Insight Is Everywhere</h1>
+    
+        <p class="post-description">Your data contains insight. Yes, yours!</p>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    
+
+
+<p>Data Science is not reserved for those people who have formally trained in it. Anyone with the motivation can hop on their laptop and start digging, investigating, and visualising.</p>
+<p>They can get started on the data they have lying around. And boy, do we have it lying around — often in very large quantities. In our jobs and in our lives, we are constantly chucking out data — and although the quality of it varies from source to source, <em>I will not believe you if you tell me that there’s nothing of value that can be drawn out from the data you have access to.</em> I want to demonstrate that it is fully possible to gain insight even from simple data sources that you may initially overlook.</p>
+<p align="center">
+<img src="/page/insight-everywhere_files/1d-9IuaaClaQWSHbpkeZwOg.jpeg" />
+</p>
+<div id="so-whats-the-deal" class="section level2">
+<h2>So what’s the deal?</h2>
+<p>In certain sectors, such as finance, there is typically no shortage of numerical data to analyse — but I appreciate that this may not be the case in other industries. So, to show that these principles apply more generally in other types of organisation, we’re going to forgo the numbers and investigate a rather generic data file.</p>
+<p>For those who are keen to understand how the data has been processed, you can follow along in the <a href="https://github.com/andrewhetherington/python-projects/blob/master/Blog%E2%80%94Insight%20Is%20Everywhere/Insight%20Is%20Everywhere.ipynb">Jupyter Notebook</a> I’ve uploaded to GitHub. <a href="https://www.python.org/">Python</a> was used for this analysis. <a href="https://numpy.org/">Numpy</a> and <a href="https://pandas.pydata.org/">Pandas</a> were used for data manipulation and calculations. All plots were produced using <a href="https://matplotlib.org/">Matplotlib</a>.</p>
+<p align="center">
+<img src="/page/insight-everywhere_files/1weYU8cJCc_hR1d5Sd7uU7w.png" />
+</p>
+<p>We’re working with Work In Progress (WIP) document, which has been used to record the details of a number of actuarial work items that have been completed since 2019. We have at our disposal:</p>
+<ul>
+<li>Member name: the name of the member for whom the task was completed</li>
+<li>Calculation type: the type of calculation needed</li>
+<li>Date requested: date on which the work was requested</li>
+<li>Deadline: date for which the work was asked to be completed by</li>
+<li>Done by: who performed the work</li>
+<li>Checked by: who checked the work</li>
+<li>Reviewed by: who reviewed and approved the work</li>
+<li>Date sent: date on which the work was finalised and sent out</li>
+<li>Deadline met?: whether the work was completed in time for the deadline, ie whether Date Sent is before or on the same day as Deadline</li>
+</ul>
+<p>Once we’ve inspected the data’s integrity and dealt with any erroneous or missing values, we’re ready to begin.</p>
+</div>
+<div id="whos-been-doing-what" class="section level2">
+<h2>Who’s been doing what?</h2>
+<p>Say we want to track how much exposure Alice and Bob have been getting to each of the roles in the work process — we want to ensure that they’re both gaining experience and progressing. After some manipulation, we can work out how many cases Alice and Bob have done, checked, and reviewed in each month since the start of 2019:</p>
+<p align="center">
+<img src="/page/insight-everywhere_files/1V5BajX48rb5R9G4AYzDmQw.png" />
+</p>
+<p>Tables are all well and good, but our brains can’t can really get a grip on tabular data in the same way as a good visualisation. Let’s plot these findings:</p>
+<p align="center">
+<img src="/page/insight-everywhere_files/14vtVA0O4Jy9O4ZYvPHUKCg.png" />
+</p>
+<p>We can see that Alice was initially doing a lot of cases, but has now transitioned into more of a checking role. Similarly, Bob was mainly checking cases at the start of 2019, whereas now he’s reviewing the large majority of cases he’s seeing. Both good indicators that our employees are learning and being challenged!</p>
+</div>
+<div id="have-we-been-meeting-deadlines" class="section level2">
+<h2>Have we been meeting deadlines?</h2>
+<p>We’re likely to have some sort of service level agreement in place to ensure that we’re doing our work quickly enough. Delivering below the agreed level of service will damage our relationships with our clients. We could end up losing business if they end up going to one of our competitors in search of better service. With that in mind, let’s look at whether we’ve been hitting our deadlines lately.</p>
+<p align="center">
+<img src="/page/insight-everywhere_files/1g1vnIWILOi7OGKi17XZRXA.png" />
+</p>
+<p>Again, let’s represent the data with a graph:</p>
+<p align="center">
+<img src="/page/insight-everywhere_files/1LNnIMpqTrNs1_LXYS6mLiw.png" />
+</p>
+<p>Looks like we generally maintain a service level of delivering between 80% and 100% of cases on time. However, there’s a pretty significant drop in service level from July to October 2019. If we’re not already aware, we’ll want to drill down into why our team wasn’t performing as well and address the issue. Were we understaffed? Was it a particularly busy period? Do we need to hire more permanent or temporary staff to cope?</p>
+<p>Sometimes data analysis can generate more questions than it answers — but if they’re the right questions, then we’re moving in the right direction and adding value.</p>
+</div>
+<div id="what-cases-are-we-missing-deadlines-for" class="section level2">
+<h2>What cases are we missing deadlines for?</h2>
+<p>Hitting deadlines is important for our team and for our relationship with our clients. Let’s take a look at the kind of cases that are the most problematic when it comes to missed deadlines.</p>
+<p align="center">
+<img src="/page/insight-everywhere_files/1rNh354SvHTpoonf1gA_v-A.png" />
+</p>
+<p>As usual, let’s see if we can plot this data in a way that reveals what’s going on more clearly:</p>
+<p align="center">
+<img src="/page/insight-everywhere_files/1CRpAoU-iBsQ1CH3kgF-fWA.png" />
+</p>
+<p>Interesting! There are certain types of calculations that are received relatively infrequently, and yet they make up a large proportion of the total cases for which we miss deadlines. In other words, we’re disproportionately bad at them for whatever reason.</p>
+<p>Potential actions could be more on-the-job coaching for the team on how to deal with these cases, or perhaps feeding back to the firm-wide training and development team that these types of calculations need to be covered more thoroughly when onboarding new staff.</p>
+</div>
+<div id="insight-is-everywhere" class="section level2">
+<h2>Insight is everywhere</h2>
+<p>Hopefully, this has gone some way to demonstrating that there is almost always something interesting to investigate when it comes to your data. We’ve only scratched the surface of what even this rather basic dataset has to offer. The limiting factor isn’t technology. It isn’t the availability of opportunities to apply data science in a real-world context. It isn’t even knowledge — there are endless resources out there that we can learn from.</p>
+<p><em>The limiting factor is motivation.</em> The learning curve can be difficult to manage at first and we all run into problems along the way. Some of those problems may seem insurmountable and can cause us to throw up our hands in exasperation and frustration. But — the pursuit of solutions to these tough problems is where we develop the most rapidly. And as long as you keep working, those problems can and will be overcome.</p>
+<p>You may not think yourself a data scientist, but truly, anyone can learn to apply these tools in their work. So I encourage you — pick up a piece of data that you work with that you think may contain some useful insight. Once you start to explore and play around with it, <em>you will very quickly prove yourself able.</em></p>
+</div>
+<div id="more-info-and-credits" class="section level2">
+<h2>More info and credits</h2>
+<p><strong>Andrew Hetherington</strong> is an actuary-in-training and data enthusiast based in London, UK.</p>
+<ul>
+<li>Connect with me on <a href="https://www.linkedin.com/in/andrewmhetherington/">LinkedIn</a>.</li>
+<li>See what I’m tinkering with on <a href="https://github.com/andrewhetherington/python-projects">GitHub</a>.</li>
+<li>The notebook used to produce the work in this article can be found <a href="https://github.com/andrewhetherington/python-projects/blob/master/Blog%E2%80%94Insight%20Is%20Everywhere/Insight%20Is%20Everywhere.ipynb">here</a>.</li>
+</ul>
+<p>Images: Telescope photo by <a href="https://unsplash.com/@socialcut">S O C I A L . C U T</a> on <a href="https://unsplash.com/">Unsplash</a>.</p>
+</div>
+
+</div>
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Andrew Hetherington" href="/">Andrew Hetherington</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2020 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="/js/jquery-1.11.3.min.js"></script>
+        <script src="/js/jquery.fitvids.js"></script>
+        
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        
+        
+        <script src="/js/scripts.js"></script>
+    </body>
+</html>
+

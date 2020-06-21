@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Identifying Emerging Market Segments with k-means &middot; Andrew Hetherington</title>
+        <meta name="description" content="How data can help in the aftermath of a pandemic">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.72.0" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Identifying Emerging Market Segments with k-means">
+<meta property="og:description" content="How data can help in the aftermath of a pandemic">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/page/emerging-market-segments-kmeans/">
+        <link rel="stylesheet" href="/dist/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+         <link rel="stylesheet" href="/extra.css" />
+        
+        
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'XXX', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Andrew Hetherington" href="/">Andrew Hetherington</a>
+                            </h1>
+                        
+                        <a class="button-square" href="/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/andrewhetherington" rel="me">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://www.linkedin.com/in/andrewmhetherington" rel="me">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:andrew.m.hetherington@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/page/about/">About</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="CV" href="/page/cv/">CV</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">Identifying Emerging Market Segments with k-means</h1>
+    
+        <p class="post-description">How data can help in the aftermath of a pandemic</p>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    <p><img src="/page/2020-06-14-r-rmarkdown_files/oc-gonzalez-xg8z_KhSorQ-unsplash.jpg" alt=""></p>
+<p><strong>EY’s <a href="https://www.ey.com/en_gl/consumer-products-retail/how-covid-19-could-change-consumer-behavior">Future Consumer Index</a></strong> is a short, 8-minute read that pulls together the results of a survey of 4,859 consumers across the US, Canada, UK, France and Germany during the week of 6 April 2020.  Using some rather snazzy data visualisation techniques, EY proposes the emergence of five distinct types of consumer in the aftermath of the Covid-19 pandemic, each with differing behaviours and sentiment in regard to their purchasing decisions.  Some of these types are pessimistic—cutting deep their expenditures—while some are greatly optimistic, jumping at the opportunity to spend more as restrictions are gradually lifted.</p>
+<p>It’s not clear exactly how EY defines these five types (“get to normal”, “cautiously extravagant”, “stay frugal”, “keep cutting”, and “back with a bang”) beyond general qualitative descriptions.  However, it did get me thinking.  Two of the key variables EY have considered are <em>optimism</em> and <em>income</em>.  Clearly, optimism relates to how willing a consumer is to spend and income relates to how able they are to do so—and both will feed into an individual’s purchasing decisions.  Suppose that we had access to quantitative data on consumers’ relative levels of optimism and income.  How could we divide consumers up into groups, based on these data, in a rigorous and reproducible way?</p>
+<h3 id="the-k-means-algorithm">The k-means algorithm</h3>
+<p><a href="https://en.wikipedia.org/wiki/K-means_clustering">K-means clustering</a> is a method that classifies a number of points into k groups.  Briefly, the algorithm searches a space for k “centroids” and allocates each data point to one of these centroids.  The algorithm then iterates over and over, aiming to minimise the variance within each cluster.  In this way, we eventually find k groups which are (hopefully) distinct and reflect the true natures of the groups within the data. 
+To illustrate, let’s create a dataset in which there are five groups of 100 consumers each.  Suppose that each group has a typical level of income and optimism, with some natural variation around these values.  We could represent the situation graphically like so:</p>
+<pre><code class="language-{r" data-lang="{r">[...] # Set seed and generate data for 100 consumers from each group
+
+incomes &lt;- cbind(normal_incomes, extravagant_incomes, frugal_incomes, 
+                 cutting_incomes, bang_incomes)
+
+optimisms &lt;- cbind(normal_optimisms, extravagant_optimisms, frugal_optimisms, 
+                   cutting_optimisms, bang_optimisms)
+
+colours &lt;- c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;orange&quot;, &quot;purple&quot;)
+
+# Set up an empty plotting area
+plot(NULL, xlim=c(0,100), ylim=c(0,100), xlab=&quot;Income&quot;, ylab=&quot;Optimism&quot;,
+     main=&quot;500 surveyed consumers, labelled&quot;)
+
+# Plot data points
+for (i in 1:5){
+  points(incomes[,i], optimisms[,i], col=colours[i], pch=3)
+}
+
+[...] # Add legend
+</code></pre><p><img src="/page/2020-06-14-r-rmarkdown_files/Labelled_500.png" alt=""></p>
+<p>The case of having two variables is particularly straightforward to think about as each point lives somewhere in this 2D income–optimism “space”. However, the k-means algorithm can be applied in an arbitrary number of dimensions — that is, we could just as easily expand our model to include a third variable (perhaps one relating to the country in which a consumer lives, as different governments have effected different measures to deal with the virus), a fourth one, and beyond.</p>
+<p>Of course, in the real world we wouldn’t know the characteristics of the groups beforehand — and we wouldn’t even know how many groups there were! So momentarily forget what I’ve told you so far and see if you can divide the following data points up into groups:</p>
+<p><img src="/page/2020-06-14-r-rmarkdown_files/Unlabelled_500.png" alt=""></p>
+<p>Not quite so simple, is it? It’s definitely possible to identify some clusters, but how many are there and where does one cluster end and another begin? Ask ten different people and you will get ten different answers. But with k-means, we can take a mathematical, data-driven approach that will give the same answer each time. Let’s apply the algorithm and see what we get:</p>
+<pre><code class="language-{r" data-lang="{r">[...] # Aggregate data into one matrix with incomes in the first column 
+and optimisms in the second
+
+# Fit model using k-means
+model &lt;- kmeans(data[,1:2], centers=5)# Retreive centroids
+
+centroids &lt;- model$centers
+centroids
+
+#     income optimism
+# 1 68.76713 58.50722
+# 2 43.95596 57.64992
+# 3 65.51750 83.71031
+# 4 34.73630 34.00436
+# 5 39.11255 89.01036
+
+# Retreive clusters
+clusters &lt;- model$cluster
+clusters
+
+# [1] 2 2 1 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 
+2 5 2 2 2 2 2 2 2 2 2 2 5 2 2 2 2 4 2 2 2 2 2 2 4 2 5 2 2 2 2 2 2 2 2 2
+2 5 2 2 5 2 5 1 2 2 2 2 2 4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 ...
+</code></pre><p>We can see that, as asked, k-means has found us five centroids and has classified each data point into one of five clusters, based on its distance from the centroid. Let’s plot our results to get a better understanding:</p>
+<pre><code class="language-{r" data-lang="{r"># Add k-means cluster result to the data
+data &lt;- cbind(data, clusters)
+
+# Define function to map cluster number to a colour
+map_colours &lt;- function(num){
+  colours[num]
+}
+
+# Apply function to data
+clusters_colours &lt;- lapply(clusters, map_colours)
+
+# Set up empty plotting area    
+plot(NULL, xlim=c(0,100), ylim=c(0,100), xlab=&quot;Income&quot;, ylab=&quot;Optimism&quot;)
+
+# Plot data points
+for (i in 1:500){
+  points(data[i,1], data[i,2], col=colours[as.integer(data[i,4])], pch=3)
+}
+</code></pre><p><img src="/page/2020-06-14-r-rmarkdown_files/Kmeans_result_v3.png" alt=""></p>
+<p>And finally, a side-by-side comparison:</p>
+<p><img src="/page/2020-06-14-r-rmarkdown_files/Comparison.png" alt=""></p>
+<p>We can see that k-means has done a pretty good job overall — the algorithm has been able to pick out the general characteristics of the five groups in terms of optimism and income. In this example, we have the ground truth to hand so we can see that k-means has grouped some of the more pessimistic “cautiously extravagant” consumers into the bulk of the “stay frugal” cluster. Although we know that k-means has got this aspect of the problem “wrong”, there are undoubtedly areas of overlap between the five types of consumer. This may even prove to be a useful insight — the algorithm has pointed out a similarity between these consumers that we may not have picked up on otherwise.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>The k-means algorithm <a href="https://stats.stackexchange.com/questions/133656/how-to-understand-the-drawbacks-of-k-means">does have its limitations</a> but it can reveal patterns and trends in data that may not be immediately visible to the human eye. This is why clustering algorithms are so often used in <a href="https://en.wikipedia.org/wiki/Exploratory_data_analysis">exploratory data analysis</a> when we’re seeking to understand a new and unfamiliar dataset. We continue to produce data at an astounding rate whenever we make purchases — and you can bet that there will be no end of analysts using techniques just like this in hopes of making sense of it all as economies gradually recover in a post-pandemic world.</p>
+<h3 id="more-info-and-credits">More info and credits</h3>
+<p><strong>Andrew Hetherington</strong> is an actuary-in-training and data enthusiast based in London, UK.</p>
+<ul>
+<li>Connect with me on <a href="https://www.linkedin.com/in/andrewmhetherington">LinkedIn</a>.</li>
+<li>Follow me on <a href="https://medium.com/@andrew.m.hetherington">Medium</a>.</li>
+<li>See what I’m tinkering with on <a href="https://github.com/andrewhetherington/python-projects">GitHub</a>.</li>
+<li>The notebook used to produce the work in this article can be found <a href="https://github.com/andrewhetherington/python-projects/blob/master/Blog%E2%80%94Emerging%20market%20segments%20with%20k-means/Blog%E2%80%94Detecting%20emerging%20market%20segments%20with%20k-means.ipynb">here</a>.</li>
+</ul>
+<p>Images: Photo by <a href="https://unsplash.com/@ocvisual?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">OC Gonzalez</a> on <a href="https://unsplash.com/s/photos/sunrise?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>.</p>
+<p>All plots and code outputs were created by the author using <a href="https://www.r-project.org/about.html">R</a> and <a href="https://rstudio.com/">RStudio</a>.</p>
+
+</div>
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Andrew Hetherington" href="/">Andrew Hetherington</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2020 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="/js/jquery-1.11.3.min.js"></script>
+        <script src="/js/jquery.fitvids.js"></script>
+        
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        
+        
+        <script src="/js/scripts.js"></script>
+    </body>
+</html>
+

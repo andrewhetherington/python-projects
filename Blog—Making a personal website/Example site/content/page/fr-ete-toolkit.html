@@ -1,0 +1,84 @@
+---
+title: "La Visualisation des Arborescences avec ETE Toolkit (FR)"
+description: "Ne vous plantez pas — je peux donner un coup de main"
+author: "Andrew Hetherington"
+date: 2020-05-25T22:12:42+12:00
+draft: false
+---
+
+
+
+<p><img src="/page/en-ete-toolkit_files/1Kw8mG6Lvk0t4wvvzz5cxhQ.jpeg" /></p>
+<p>Le monde est très complexe. Les choses sont liées en tout un tas des façons — quelques relations sont intuitives, autres ne sont pas. Du coup, les données qu’on ramasse se présentent sous diverses formes.</p>
+<p>En plus, Data Visualisation est un des plus importants aspects du processus de l’analyse des données. <em>La visualisation de façon claire est donc cruciale lorsqu’il faut aider les clients à comprendre.</em></p>
+<p>En combinaison, ces deux points-ci veulent dire que les gens qui travaillent avec les données ont besoin d’être prêts à les représenter avec des techniques et des méthodes qui <em>mieux illustrer les relations</em> entre les points de données — et <em>les conséquences pour l’action.</em> Aujourd’hui, on va survoler une représentation possible et un outil vous pouvez utiliser pour le créer.</p>
+<div id="les-arborescences-comme-des-structures-de-données" class="section level2">
+<h2>Les arborescences comme des structures de données</h2>
+<p>Au travail, je suis devenu familier avec <em>les arborescences.</em> Il s’agit d’une façon de représenter une collection de données. Les relations entre les instances d’une arborescence sont relativement intuitives á comprendre, grâce à l’analogie avec les arbres botaniques, avec lesquelles on est familier (j’espère). Les idées des racines, des feuilles, et des branches se transfèrent assez bien quand on parle de la structure de données, plutôt que la plante périnéale.</p>
+<p align="center">
+<img src="/page/en-ete-toolkit_files/1G5CnbEVkpio8vsrQyJYtlw.png" />
+</p>
+<p>Les arbres et les hiérarchies se trouvent n’importe où — notamment parmi les exemples dans le monde réel sont les structures des entreprises et les arbres évolutionnaires.</p>
+<p align="center">
+<img src="/page/en-ete-toolkit_files/1huUiBjqTZ_J8FxwZApKhxQ.png" />
+</p>
+<p>On peut voir que c’est relativement facile à dessiner un arbre pour un ensemble de données qui est lié hiérarchiquement. Mais qu’est-ce qu’il faut faire quand on a beaucoup de données, ou si les données évoluent constamment ? Le processus de redessiner l’arbre entier est douloureux et consomme pas mal de temps…</p>
+</div>
+<div id="ete-toolkit" class="section level2">
+<h2>ETE Toolkit</h2>
+<p>C’est où est qu’ETE Toolkit peut nous aider. Il s’agit d’une bibliothèque Python pour l’analyse et la visualisation des arborescences. C’était développé originalement par la faculté de bio-informatiques au Principe Felipe Centre de Recherche à Valence, Espagne, donc c’est capable de tout un tas d’analyse scientifique. Elle fournit une façon utile à automatiser la visualisation de n’importe quelle structure de données avec la forme d’un arbre. On ne va que traiter les basiques ici — jetez un petit coup d’œil à la gallérie ETE Toolkit pour voir quelques fonctionnalités plus avancées.</p>
+</div>
+<div id="la-visualisation-dun-système-pour-les-renvois-dabonnés" class="section level2">
+<h2>La visualisation d’un système pour les renvois d’abonnés</h2>
+<p>Alors, par exemple, utilisons un système pour les renvois d’abonnés. Vous êtes probablement familier avec la façon dans laquelle ça marche — un client qui a acheté un produit est donné un code unique pour partager avec leurs amis. Si un de leurs amis décide à aussi obtenir le produit et utilise ce code quand on le fait, les deux reçoivent une récompense. Il s’agit d’un scénario gagnant-gagnant — l’entreprise qui vend le produit peut concorder les intérêts des clients avec les siens en fournissant une motivation pour passer le mot au niveau du produit. Et bien sûr, les clients eux-mêmes profitent d’une réduction.</p>
+<p>Disons que chaque client est permis à recommander jusqu’à cinq personnes. Disons aussi qu’on a actuellement nos données sous forme de tableau, comme ci :</p>
+<p align="center">
+<img src="/page/en-ete-toolkit_files/1b__CGfObxVVuGonKLxL4ag.png" />
+</p>
+<p>On a les données sur plusieurs achats. En particulier :</p>
+<ul>
+<li>La date de l’achat ;</li>
+<li>Le nom du client ;</li>
+<li>Qui a recommander le client ; et</li>
+<li>Combien d’argent ce client a dépensé.</li>
+</ul>
+<p>Les données ici ont une forme hiérarchique — chaque client peut être représenté avec un nœud d’un arbre, avec la personne qui l’a recommandé en haut de lui. Les autres que le client lui-même a recommandés se trouvent en bas. On peut aussi voir ici qu’Alice est la cliente « originale » qui a créé cette chaîne particulière de recommandations — c’est-à-dire, Alice est la seule cliente qui était pas recommandée par quelqu’un d’autre. Du coup, elle est la racine de cet arbre.</p>
+<p>Cela étant, on pourrait dessiner un diagramme à la main — on pourrait traverser chaque client et élaborer qui devrait être lié au client dans l’arbre, ajoutant les « fils » où est que c’est nécessaire. Mais pourquoi le faire quand ETE peut faire tout le boulot pour nous ?</p>
+<p>ETE reçoit des informations sous <em>format « Newick »</em> — qui est une manière relativement standard pour décrire la structure d’un arbre de façon compacte, utilisée dans les domaines mathématiques et scientifiques. Laissez-moi vous donner quelques exemples:</p>
+<p align="center">
+<img src="/page/en-ete-toolkit_files/1oGGF1NShsfIpmAocj8oPfQ.png" />
+</p>
+<p>Vous pouvez probablement remarquer qu’un ensemble des branches est représenté par une paire de parenthèses. Le nombre de branches qui viennent d’une des branches est déterminé par la présence de virgules entre les parenthèses. Et bien sûr, les parenthèses peuvent être emboitées afin de produire les structures plus et plus complexes.</p>
+<p>Je ne vais pas rentre dans les détails du format Newick — c’est assez pour savoir qu’on peut indiquer à ETE ce qu’on veut en transformant nos données en ce format. J’ai écrit un peu de code pour le faire pour nous que je ne vais pas expliquer ici — si vous êtes intéressé, jetez un œil au Notebook Jupyter sur GitHub qui accompagne ce poste pour plus d’informations.</p>
+<p>Nos données des clients peuvent être écrit sous format Newick comme ci :</p>
+<p align="center">
+<img src="/page/en-ete-toolkit_files/1TLn8LL3fxk1d7ZEhiFo2GA.png" />
+</p>
+<p>Voyons ce qu’on obtient quand on les donne à ETE :</p>
+<p align="center">
+<img src="/page/en-ete-toolkit_files/1zPZ97WpydbWk4VIMR73TUw.png" />
+</p>
+<p>Pas mal ! Un peu basique maintenant, me semble-t-il — mais ETE a facilité le processus de visualisation. En plus, on peut simplement reprendre le code lorsqu’on obtient les données actualisées !</p>
+<p>Un autre avantage d’ETE s’agit du fait qu’on peut facilement faire les ajustements aux aspects de présentation de l’arbre. Voyons si on peut le rendre un petit peu plus chouette…</p>
+<p align="center">
+<img src="/page/en-ete-toolkit_files/1cyZSq9yrgXGN1-kIsgO7ng.png" />
+</p>
+<p>C’est mieux. On ne gratte que la surface des capabilités d’ETE Toolkit — mais pour une petite démonstration, c’est suffisant pour obtenir les idées clées.</p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Le cerveau humain adore aspirer les informations visuels. Les arborescences viennent avec une analogie simple qui les rend intuitive et facile à comprendre. Du coup, elles sont un bon outil pour l’expression et l’explication des idées aux non-spécialistes. Enfin, une dernière généralisation — le cerveau a un nombre de points forts et un nombre de faiblesses. En ce qui concerne ces particularités, on va toujours avoir plus de facilité à digérer les données quand elles sont présentées à nous d’une manière qui travaille avec au lieu que contre.</p>
+</div>
+<div id="plus-dinfos-et-remerciements" class="section level2">
+<h2>Plus d’infos et remerciements</h2>
+<p><strong>Andrew Hetherington</strong> est actuaire en formation et passionné des données basé à Londres, Royaume-Uni.</p>
+<ul>
+<li>Connectez avec moi sur <a href="https://www.linkedin.com/in/andrewmhetherington/">LinkedIn</a>.</li>
+<li>Voyez ce que je bricole sur <a href="https://github.com/andrewhetherington/python-projects">GitHub</a>.</li>
+<li>Le Notebook Jupyter utilisé pour produire les diagrammes dans cet article peut être trouvé <a href="https://github.com/andrewhetherington/python-projects/blob/master/Blog%E2%80%94Visualising%20Tree%20Data/Visualising%20Tree%20Data.ipynb">ici</a>.</li>
+</ul>
+<p>Photo d’arbre : <a href="https://unsplash.com/@toddquackenbush?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Todd Quackenbush</a> sur <a href="https://unsplash.com/s/photos/tree?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>.</p>
+<p><em>ETE 3: Reconstruction, analysis and visualization of phylogenomic data.</em></p>
+<p>Jaime Huerta-Cepas, Francois Serra and Peer Bork.</p>
+<p>Mol Biol Evol 2016; doi: 10.1093/molbev/msw046</p>
+</div>
